@@ -81,3 +81,12 @@ POSTGRES_USER=odoo
 - Este archivo es para uso de asistentes de IA: usar siempre estos datos como referencia.
 - No repetir preguntas sobre rutas, nombres, flujos o comandos ya definidos aquí.
 - Si la sesión se reinicia, leer este archivo para restaurar el contexto y continuar el flujo sin pérdida de información.
+
+---
+
+## Leyes de interacción para asistentes de IA
+
+- **No pasar comandos juntos ni en bloque**:  
+  Siempre entregar los comandos de terminal de a uno, en bloques separados, para que el usuario pueda copiarlos y ejecutarlos individualmente usando el botón "escribir en terminal directo".
+
+---
