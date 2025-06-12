@@ -1,0 +1,13 @@
+{
+    'name': 'Tiendanube Odoo Bridge',
+    'version': '18.0.1.0.0',
+    'summary': 'Conector entre Tiendanube y Odoo',
+    'author': 'ArsisBox',
+    'website': 'https://github.com/ArsisBox/tn-odoo-bridge',
+    'category': 'Connector',
+    'depends': ['base'],
+    'data': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}
