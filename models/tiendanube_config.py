@@ -17,6 +17,7 @@ class TiendanubeConfig(models.Model):
         ('pending', 'Pendiente de autorización'),
         ('connected', 'Conectado')
     ], string='Estado', default='disconnected')
+    tiendanube_api_url = fields.Char(string='API URL')  # Campo agregado
 
     def action_test_oauth(self):
         # Acción de prueba, puedes personalizarla luego
