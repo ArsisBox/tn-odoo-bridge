@@ -1,0 +1,1 @@
+from . import tiendanube_config

@@ -6,7 +6,11 @@
     'website': 'https://github.com/ArsisBox/tn-odoo-bridge',
     'category': 'Connector',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/tiendanube_config_views.xml',
+        'views/menus.xml',
+    ],
     'installable': True,
     'application': True,
     'auto_install': False,

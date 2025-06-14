@@ -1,0 +1,13 @@
+<odoo>
+    <menuitem id="menu_tiendanube_root" name="Tiendanube" sequence="10"/>
+    <record id="action_tiendanube_config" model="ir.actions.act_window">
+        <field name="name">Configuración Tiendanube</field>
+        <field name="res_model">tiendanube.config</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="menu_tiendanube_config"
+              name="Configuración"
+              parent="menu_tiendanube_root"
+              action="action_tiendanube_config"
+              sequence="20"/>
+</odoo>
