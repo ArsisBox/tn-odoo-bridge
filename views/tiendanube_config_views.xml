@@ -20,15 +20,15 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_connect_tiendanube" 
-                            string="Conectar con Tiendanube" 
-                            type="object" 
-                            class="btn-primary"
-                            attrs="{'invisible': [('state', '=', 'connected')]}"/>
-                    <button name="action_test_oauth" 
-                            string="Probar Conexión" 
+                    <button name="action_connect_tiendanube"
+                            string="Conectar con Tiendanube"
                             type="object"
-                            attrs="{'invisible': [('state', '!=', 'connected')]}"/>
+                            class="btn-primary"
+                            invisible="state == 'connected'"/> <!-- MODIFICADO -->
+                    <button name="action_test_oauth"
+                            string="Probar Conexión"
+                            type="object"
+                            invisible="state != 'connected'"/> <!-- MODIFICADO -->
                     <field name="state" widget="statusbar" statusbar_visible="disconnected,pending,connected,error"/>
                 </header>
                 <sheet>
