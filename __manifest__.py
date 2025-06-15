@@ -5,7 +5,7 @@
     'author': 'ArsisBox',
     'website': 'https://github.com/ArsisBox/tn-odoo-bridge',
     'category': 'Connector',
-    'depends': ['base'],
+    'depends': ['base', 'web'],
     'data': [
         'security/ir.model.access.csv',
         'views/tiendanube_config_views.xml',
