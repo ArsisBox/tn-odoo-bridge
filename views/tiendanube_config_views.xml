@@ -1,15 +1,15 @@
 <odoo>
-    <!-- Vista Lista (Tree) - Parece bien, solo añadir tiendanube_user_id si es útil aquí -->
+    <!-- Vista Lista (Tree) -->
     <record id="view_tiendanube_config_list" model="ir.ui.view">
         <field name="name">tiendanube.config.list</field>
         <field name="model">tiendanube.config</field>
         <field name="arch" type="xml">
-            <tree>
+            <list> <!-- MODIFICADO DE <tree> a <list> -->
                 <field name="name"/>
                 <field name="client_id"/>
-                <field name="tiendanube_user_id"/> <!-- AÑADIDO OPCIONALMENTE -->
+                <field name="tiendanube_user_id"/>
                 <field name="state"/>
-            </tree>
+            </list> <!-- MODIFICADO DE </tree> a </list> -->
         </field>
     </record>
 
@@ -45,19 +45,10 @@
                             <field name="access_token" readonly="1"/>
                             <field name="tiendanube_user_id" readonly="1"/>
                             <field name="token_expiry" string="Fecha de Obtención/Actualización del Token" readonly="1"/>
-                            <field name="oauth_state_value" invisible="1"/> <!-- Para depuración, puedes quitar invisible="1" temporalmente -->
+                            <field name="oauth_state_value" invisible="1"/>
+                            <!-- Asegúrate de que NO haya ninguna línea aquí como <field name="refresh_token"/> -->
                         </group>
                     </group>
-                    <!-- El footer con el botón de testeo ya no es necesario si está en el header,
-                         pero si quieres mantenerlo, asegúrate de que su lógica sea la deseada.
-                         Por consistencia, es mejor tener los botones de acción en el header.
-                    <footer>
-                        <button name="action_test_oauth"
-                                type="object"
-                                string="Testear OAuth"
-                                class="btn-primary"/>
-                    </footer>
-                    -->
                 </sheet>
             </form>
         </field>
